@@ -1,0 +1,16 @@
+.container {
+  border: 2px solid #2a2a2a;
+  padding: 8px;
+}
+
+.isActive {
+  border-color: green;
+}
+
+.isRetired {
+  border-color: red;
+}
+
+.text {
+  margin: 0;
+}

@@ -1,0 +1,17 @@
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.mySuperIcon {
+  color: orangered;
+  width: 40px;
+  height: 40px;
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

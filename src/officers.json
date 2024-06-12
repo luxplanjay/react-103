@@ -6,7 +6,7 @@
     "age": 42,
     "spec": "Fighter Pilot",
     "skills": ["Combat Maneuvers", "Navigation", "Strategic Planning"],
-    "status": "Active"
+    "active": true
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "age": 35,
     "spec": "Reconnaissance",
     "skills": ["Stealth Operations", "Surveillance", "Data Analysis"],
-    "status": "Active"
+    "active": true
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "age": 50,
     "spec": "Transport Pilot",
     "skills": ["Astrogation", "Cargo Handling", "Emergency Response"],
-    "status": "Retired"
+    "active": false
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "age": 38,
     "spec": "Science Officer",
     "skills": ["Research", "Data Analysis", "Experimentation"],
-    "status": "Active"
+    "active": true
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "age": 30,
     "spec": "Engineering Officer",
     "skills": ["Mechanical Engineering", "Systems Maintenance", "Repair"],
-    "status": "Active"
+    "active": true
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "age": 32,
     "spec": "Communications Officer",
     "skills": ["Interstellar Communications", "Diplomacy", "Translation"],
-    "status": "Active"
+    "active": false
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "age": 45,
     "spec": "Fighter Pilot",
     "skills": ["Combat Maneuvers", "Navigation", "Strategic Planning"],
-    "status": "Active"
+    "active": true
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "age": 33,
     "spec": "Reconnaissance",
     "skills": ["Stealth Operations", "Surveillance", "Data Analysis"],
-    "status": "Active"
+    "active": true
   },
   {
     "id": 9,
@@ -78,6 +78,6 @@
     "age": 48,
     "spec": "Transport Pilot",
     "skills": ["Astrogation", "Cargo Handling", "Emergency Response"],
-    "status": "Retired"
+    "active": false
   }
 ]
