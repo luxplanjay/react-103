@@ -1,0 +1,9 @@
+.container {
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
