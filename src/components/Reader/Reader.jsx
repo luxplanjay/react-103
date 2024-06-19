@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import css from "./Reader.module.css";
-import Progress from "../Progress";
+
+const getInitialIdx = () => {
+  const savedIdx = localStorage.getItem("artcl-idx");
+  if (savedIdx !== null) {
+    return JSON.parse(savedIdx);
+  }
+  return 0;
+};
 
 export default function Reader({ items }) {
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(getInitialIdx);
 
   const handlePrev = () => {
     setIdx(idx - 1);
@@ -12,6 +19,10 @@ export default function Reader({ items }) {
   const handleNext = () => {
     setIdx(idx + 1);
   };
+
+  useEffect(() => {
+    localStorage.setItem("artcl-idx", idx);
+  }, [idx]);
 
   const isFirst = idx === 0;
   const isLast = idx === items.length - 1;
@@ -29,7 +40,9 @@ export default function Reader({ items }) {
           </button>
         </div>
 
-        <Progress current={idx + 1} total={items.length} />
+        <p>
+          {idx + 1}/{items.length}
+        </p>
       </header>
 
       <article>
