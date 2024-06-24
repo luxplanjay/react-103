@@ -1,27 +1,44 @@
 import { useState } from "react";
-import ClickTracker from "../ClickTracker/ClickTracker";
-import Timer from "../Timer/Timer";
-import Reader from "../Reader/Reader";
-import articles from "../../articles.json";
+import UserForm from "../UserForm/UserForm";
+import OrderForm from "../OrderForm/OrderForm";
+import TextInput from "../TextInput/TextInput";
+import LangSwitcher from "../LangSwitcher/LangSwitcher";
 import css from "./App.module.css";
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [lang, setLang] = useState("en");
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
+  const changeLang = (newLang) => {
+    setLang(newLang);
+  };
+
+  const [inputValue, setInputValue] = useState("");
+
+  const changeInputValue = (newValue) => {
+    setInputValue(newValue);
+  };
+
+  const addUser = (newUser) => {
+    console.log("Send to backend", newUser);
+  };
+
+  const makeOrder = (newOrder) => {
+    console.log("Make new order", newOrder);
   };
 
   return (
     <div className={css.container}>
-      <h1>Effects in React</h1>
+      <h1>Forms in React</h1>
 
-      <ClickTracker />
+      <UserForm onAdd={addUser} />
 
-      <button onClick={toggle}>{isOpen ? "Unmount" : "Mount"}</button>
-      {isOpen && <Timer />}
+      <LangSwitcher value={lang} onSelect={changeLang} />
+      <p>Selected lang: {lang}</p>
 
-      <Reader items={articles} />
+      <TextInput value={inputValue} onType={changeInputValue} />
+      <p>{inputValue}</p>
+
+      <OrderForm onOrder={makeOrder} />
     </div>
   );
 }
